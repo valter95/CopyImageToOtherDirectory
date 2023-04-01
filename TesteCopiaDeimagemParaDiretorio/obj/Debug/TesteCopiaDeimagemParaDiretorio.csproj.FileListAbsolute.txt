@@ -1,0 +1,10 @@
+C:\Users\Valtinho\Programas\TesteCopiaDeimagemParaDiretorio\bin\Debug\TesteCopiaDeimagemParaDiretorio.exe.config
+C:\Users\Valtinho\Programas\TesteCopiaDeimagemParaDiretorio\bin\Debug\TesteCopiaDeimagemParaDiretorio.exe
+C:\Users\Valtinho\Programas\TesteCopiaDeimagemParaDiretorio\bin\Debug\TesteCopiaDeimagemParaDiretorio.pdb
+C:\Users\Valtinho\Programas\TesteCopiaDeimagemParaDiretorio\obj\Debug\TesteCopiaDeimagemParaDiretorio.csprojAssemblyReference.cache
+C:\Users\Valtinho\Programas\TesteCopiaDeimagemParaDiretorio\obj\Debug\TesteCopiaDeimagemParaDiretorio.frmTesteImagem.resources
+C:\Users\Valtinho\Programas\TesteCopiaDeimagemParaDiretorio\obj\Debug\TesteCopiaDeimagemParaDiretorio.Properties.Resources.resources
+C:\Users\Valtinho\Programas\TesteCopiaDeimagemParaDiretorio\obj\Debug\TesteCopiaDeimagemParaDiretorio.csproj.GenerateResource.cache
+C:\Users\Valtinho\Programas\TesteCopiaDeimagemParaDiretorio\obj\Debug\TesteCopiaDeimagemParaDiretorio.csproj.CoreCompileInputs.cache
+C:\Users\Valtinho\Programas\TesteCopiaDeimagemParaDiretorio\obj\Debug\TesteCopiaDeimagemParaDiretorio.exe
+C:\Users\Valtinho\Programas\TesteCopiaDeimagemParaDiretorio\obj\Debug\TesteCopiaDeimagemParaDiretorio.pdb
