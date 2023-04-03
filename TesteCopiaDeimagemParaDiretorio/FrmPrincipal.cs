@@ -15,6 +15,11 @@ namespace TesteCopiaDeimagemParaDiretorio
     {
         private string caminhoDestino, caminhoBase, extensaoArquivo;
 
+        private void frmTesteImagem_Load(object sender, EventArgs e)
+        {
+
+        }
+
         public frmTesteImagem()
         {
             InitializeComponent();

@@ -16,7 +16,7 @@ namespace TesteCopiaDeimagemParaDiretorio
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmTesteImagem());
+            Application.Run(new frmTelaInicial());
         }
     }
 }
