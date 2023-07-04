@@ -8,7 +8,6 @@ C:\Users\Valtinho\Programas\TesteCopiaDeimagemParaDiretorio\obj\Release\TesteCop
 C:\Users\Valtinho\Programas\TesteCopiaDeimagemParaDiretorio\obj\Release\TesteCopiaDeimagemParaDiretorio.csproj.CoreCompileInputs.cache
 C:\Users\Valtinho\Programas\TesteCopiaDeimagemParaDiretorio\obj\Release\TesteCopiaDeimagemParaDiretorio.exe
 C:\Users\Valtinho\Programas\TesteCopiaDeimagemParaDiretorio\obj\Release\TesteCopiaDeimagemParaDiretorio.pdb
-C:\Users\Valtinho\Programas\CopyImageToOtherDirectory\TesteCopiaDeimagemParaDiretorio\obj\Release\TesteCopiaDeimagemParaDiretorio.csprojAssemblyReference.cache
 C:\Users\Valtinho\Programas\CopyImageToOtherDirectory\TesteCopiaDeimagemParaDiretorio\obj\Release\TesteCopiaDeimagemParaDiretorio.frmTesteImagem.resources
 C:\Users\Valtinho\Programas\CopyImageToOtherDirectory\TesteCopiaDeimagemParaDiretorio\obj\Release\TesteCopiaDeimagemParaDiretorio.Properties.Resources.resources
 C:\Users\Valtinho\Programas\CopyImageToOtherDirectory\TesteCopiaDeimagemParaDiretorio\obj\Release\TesteCopiaDeimagemParaDiretorio.frmTelaInicial.resources

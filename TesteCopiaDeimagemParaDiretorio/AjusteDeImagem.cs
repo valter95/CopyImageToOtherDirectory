@@ -31,52 +31,66 @@ namespace TesteCopiaDeimagemParaDiretorio
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-
-            if (string.IsNullOrEmpty(txtNomeDaImagem.Text))
-            {
-                MessageBox.Show("Você deve preencher o campo nome do produto para prosseguir com a ação", "Aviso");
-                return;
-            }
-            caminhoDestino = ($"{Application.StartupPath}\\ImagensProduto");
-
-            OpenFileDialog openFile = new OpenFileDialog()
+            try
             {
 
-                Filter = "Arquivos .jpg e .png|*.jpg; *.png",
-                Title = "Selecione o arquivo de imagem"
-            };
-            if (openFile.ShowDialog() == DialogResult.OK)
-            {
-                caminhoBase = openFile.FileName;
-                pictureBox1.Load(caminhoBase);
-                //textbox1.Text = caminhoBase;
-
-                if (!Directory.Exists(caminhoDestino))
+                if (string.IsNullOrEmpty(txtNomeDaImagem.Text))
                 {
-                    Directory.CreateDirectory(caminhoDestino);
+                    MessageBox.Show("Você deve preencher o campo nome do produto para prosseguir com a ação", "Aviso");
+                    return;
                 }
-                extensaoArquivo = Path.GetExtension(caminhoBase);
-                caminhoDestino = Path.Combine($"{caminhoDestino}\\{txtNomeDaImagem.Text}{DateTime.Now.ToString("yyyyMMddHHmmss")}{extensaoArquivo}");
-                File.Copy(caminhoBase, caminhoDestino);
+                caminhoDestino = ($"{Application.StartupPath}\\ImagensProduto");
 
-                
-                largura = Convert.ToInt32(txtLArgura.Text);
-                altura = Convert.ToInt32(txtAltura.Text);
-
-                if ((NovaImagemStream = openFile.OpenFile()) != null)
+                OpenFileDialog openFile = new OpenFileDialog()
                 {
-                    using (NovaImagemStream)
+
+                    Filter = "Arquivos .jpg e .png|*.jpg; *.png; *.jpeg",
+                    Title = "Selecione o arquivo de imagem"
+                };
+                if (openFile.ShowDialog() == DialogResult.OK)
+                {
+                    caminhoBase = openFile.FileName;
+                    pictureBox1.Load(caminhoBase);
+                    //textbox1.Text = caminhoBase;
+
+                    if (!Directory.Exists(caminhoDestino))
                     {
-                        var image = Image.FromStream(NovaImagemStream);
-
-                        var NovaImagemRedimencionada = ResizeImage(image, largura, altura);
-                        NovaImagemRedimencionada.Save(caminhoDestino, ImageFormat.Png);
+                        Directory.CreateDirectory(caminhoDestino);
                     }
-                }
-                txtCaminhoDestino.Text = caminhoDestino;
-                pictureBox2.Load(caminhoDestino);
-            }
+                    extensaoArquivo = Path.GetExtension(caminhoBase);
+                    caminhoDestino = Path.Combine($"{caminhoDestino}\\{txtNomeDaImagem.Text}{DateTime.Now.ToString("yyyyMMddHHmmss")}{extensaoArquivo}");
+                    File.Copy(caminhoBase, caminhoDestino);
 
+
+                    if (string.IsNullOrEmpty(txtLArgura.Text) && string.IsNullOrEmpty(txtAltura.Text))
+                    {
+                        MessageBox.Show("Você deve preencher os campos largura e altura\npara que imagem possa ser reajustada", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
+                    }
+                    else
+                    {
+
+                        largura = Convert.ToInt32(txtLArgura.Text);
+                        altura = Convert.ToInt32(txtAltura.Text);
+                    }
+                    if ((NovaImagemStream = openFile.OpenFile()) != null)
+                    {
+                        using (NovaImagemStream)
+                        {
+                            var image = Image.FromStream(NovaImagemStream);
+
+                            var NovaImagemRedimencionada = ResizeImage(image, largura, altura);
+                            NovaImagemRedimencionada.Save(caminhoDestino, ImageFormat.Png);
+                        }
+                    }
+                    txtCaminhoDestino.Text = caminhoDestino;
+                    pictureBox2.Load(caminhoDestino);
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show($"Ocorreu um erro ao buscar e reajustar a imagem\nDescrição do erro:'{ex.Message}'");
+            }
         }
         private Bitmap ResizeImage(Image image, int width, int height)
         {
